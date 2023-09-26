@@ -1,4 +1,3 @@
-# teste-caixa-branca
 # TESTE CAIXA BRANCA
 
 ## Código analisado:
