@@ -11,29 +11,39 @@ public class User {
     public Connection conectarBD() {
         Connection conn = null;
         try{
-            Class.forName(com.mysql.Driver.Manager).newInstance();
-            String url = "jdbc:mysql://127.0.0.1/test?user=lopes&password=123";
-            conn = DriverManager.getConnection(url);
+            // Ponto de Entrada (1): Chamada do método conectarBD.
+            Class.forName(com.mysql.Driver.Manager).newInstance(); // Nó 1 (2)
+            String url = "jdbc:mysql://127.0.0.1/test?user=lopes&password=123"; // Nó 2 (3)
+            conn = DriverManager.getConnection(url); // Nó 3 (4)
         }catch (Exception e ) { }
-        return conn;}
+        return conn;
+    }
+    
     public String nome="";
     public boolean result = false;
+    
     public boolean verificarUsuario(String login, String senha){
        String sql = "";
        Connection conn = conectarBD();
        //INSTRUÇÃO SQL
+       
+       // Nó 4 (5): Início do método verificarUsuario.
        sql += "select nome from usuarios ";
        sql += "where login = " + " ' " + login + " ' ";
-       sql += " and senha = " + " ' " + senha +  " ' ; ";
+       sql += " and senha = " + " ' " + senha +  " ' ; "; // Nó 5 (6)
+       
        try{
-           Statement st = conn.createStatement();
-           ResultSet rs = st.executeQuery(sql);
-            if (rs.next()){
-                result = true;
-                nome = rs.getString("nome");}
-            }catch (Exception e) { }
-            return result;}
-       }
+           Statement st = conn.createStatement(); // Nó 6 (7)
+           ResultSet rs = st.executeQuery(sql); // Nó 7 (8)
+            if (rs.next()){ // Nó 8 (9)
+                result = true; // Nó 9 (10)
+                nome = rs.getString("nome"); // Nó 10 (11)
+            }
+       }catch (Exception e) { }
+       return result; // Nó 11 (12)
+    }
+}
+
 ```
 
 ## Pontos de observação
