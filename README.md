@@ -71,8 +71,11 @@ Neste código não há chamadas para fechamento em nenhum momento, seja nas cone
 <img src='GrafoDeFluxo.png'>
 
 ## Caminhos e Sequências Possíveis
-```
-1 -> 2 -> 3 -> 4
-         |
-5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11
-```
+1. Ponto de Entrada -> Início do método conectarBD -> Construção da URL de conexão -> Tentativa de conexão com o banco de dados -> Fim do método conectarBD;
+   
+2. Ponto de Entrada -> Início do método verificarUsuario -> Construção da instrução SQL -> Criação da declaração SQL -> Execução da consulta SQL -> Verificação do resultado da consulta (com resultado verdadeiro) -> Definir a variável 'result' como verdadeira e obter o nome -> Retorno da função verificarUsuario;
+
+3. Ponto de Entrada -> Início do método verificarUsuario -> Construção da instrução SQL -> Criação da declaração SQL -> Execução da consulta SQL -> Verificação do resultado da consulta (sem resultado verdadeiro) -> Retorno da função verificarUsuario;
+
+4. Ponto de Entrada -> Início do método verificarUsuario -> Construção da instrução SQL -> Criação da declaração SQL -> Execução da consulta SQL (com erro) -> Tratamento de exceção -> Retorno da função verificarUsuario.
+
