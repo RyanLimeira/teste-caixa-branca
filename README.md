@@ -70,6 +70,12 @@ Neste código não há chamadas para fechamento em nenhum momento, seja nas cone
 
 <img src='GrafoDeFluxo.png'>
 
+## Complexidade Ciclomática
+1. V(G) = 11 - 9 + 2 = 4.
+2. V(G) = 3 + 1 = 4.
+
+(Utilizando as duas fórmulas é possível identificar o resultado "4", representando 4 caminhos possíveis.)
+
 ## Caminhos e Sequências Possíveis
 1. Ponto de Entrada -> Início do método conectarBD -> Construção da URL de conexão -> Tentativa de conexão com o banco de dados -> Fim do método conectarBD;
    
