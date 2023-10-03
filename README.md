@@ -69,3 +69,10 @@ Neste código não há chamadas para fechamento em nenhum momento, seja nas cone
 ## Grafo de Fluxo
 
 <img src='GrafoDeFluxo.png'>
+
+## Caminhos e Sequências Possíveis
+```
+1 -> 2 -> 3 -> 4
+         |
+5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11
+```
