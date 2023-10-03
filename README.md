@@ -65,3 +65,7 @@ Não como se aprofundar neste tópico já que temos apenas um trecho do código,
 
 ### As conexões utilizadas foram fechadas?
 Neste código não há chamadas para fechamento em nenhum momento, seja nas conexões, declarações ou resultados. É de extrema importância o fechamento para evitar vazamentos e para manter boas práticas de programação. 
+
+## Grafo de Fluxo
+
+<img src='GrafoDeFluxo.png'>
