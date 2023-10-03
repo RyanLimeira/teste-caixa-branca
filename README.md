@@ -11,7 +11,7 @@ public class User {
     public Connection conectarBD() {
         Connection conn = null;
         try{
-            // Ponto de Entrada (1): Chamada do método conectarBD.
+            **// Ponto de Entrada (1): Chamada do método conectarBD.**
             Class.forName(com.mysql.Driver.Manager).newInstance(); // Nó 1 (2)
             String url = "jdbc:mysql://127.0.0.1/test?user=lopes&password=123"; // Nó 2 (3)
             conn = DriverManager.getConnection(url); // Nó 3 (4)
