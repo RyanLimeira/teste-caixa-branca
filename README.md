@@ -76,7 +76,7 @@ Neste código não há chamadas para fechamento em nenhum momento, seja nas cone
 
 (Utilizando as duas fórmulas é possível identificar o resultado "4", representando 4 caminhos possíveis.)
 
-## Caminhos e Sequências Possíveis
+## Base de Caminhos
 1. Ponto de Entrada -> Início do método conectarBD -> Construção da URL de conexão -> Tentativa de conexão com o banco de dados -> Fim do método conectarBD;
    
 2. Ponto de Entrada -> Início do método verificarUsuario -> Construção da instrução SQL -> Criação da declaração SQL -> Execução da consulta SQL -> Verificação do resultado da consulta (com resultado verdadeiro) -> Definir a variável 'result' como verdadeira e obter o nome -> Retorno da função verificarUsuario;
